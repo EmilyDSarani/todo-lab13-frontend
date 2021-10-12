@@ -33,11 +33,13 @@ export async function signIn (email, password){
     const response = await request 
     .post('https://saranilist.herokuapp.com/api/todo/')
     .send({email,password})
+    return response.body
 
 }
 export async function signUp (email, password){
     const response = await request 
     .post('https://saranilist.herokuapp.com/api/todo/')
     .send({email,password})
+    return response.body
 
 }
