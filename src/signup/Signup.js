@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-
+import SignupRender from './SignupRender';
 export default class Todo extends Component {
   render() {
     return (
       <div>
-                 Sign Up
+        <SignupRender />
       </div>
     );
   }
