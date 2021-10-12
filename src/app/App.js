@@ -55,7 +55,9 @@ class App extends Component {
               <Route
                 path="/Login"
                 exact
-                render={(routerProps)=> <Login {...routerProps}/>}
+                render={(routerProps)=> <Login
+                  handleTokenChange = {this.handleTokenChange}
+                  {...routerProps}/>}
               />
               <Route
                 path="/Todo"
