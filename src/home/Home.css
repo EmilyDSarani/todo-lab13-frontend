@@ -1,3 +1,11 @@
-.Home {
-  
+:root{
+--dark-jungle-green: rgb(132, 166, 173);
+--air-superiority-blue: rgb(82, 117, 102);
+--cambridge-blue: rgb(173, 218, 230);
+--dutch-white: rgb(113, 148, 112);
+--pink-lace: rgb(247, 240, 244);
+}
+
+body{
+    background-color: var(--dark-jungle-green);
 }

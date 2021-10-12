@@ -1,10 +1,23 @@
-.App {
-  height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+a{
+  margin: 5px;
+  color: var(--dark-jungle-green);
 }
 
-main {
-  background: #FAF0EA;
+.active{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: medium;
+  background-color: var(--cambridge-blue);
+  color: var(--air-superiority-blue);
 }
+
+.not{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: small;
+  padding: 15px;
+  background-color: var(--pink-lace);
+  color: var(--pink-lace);
+
+}
+
+
 
