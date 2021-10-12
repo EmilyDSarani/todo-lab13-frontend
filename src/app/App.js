@@ -32,8 +32,8 @@ class App extends Component {
           <header className= 'not'>
             <NavLink exact activeClassName='active' to='/'>Home</NavLink> 
             <NavLink exact activeClassName='active' to='/SignUp'>SignUp</NavLink> 
-            <NavLink exact activeClassName='active' to='/Login'>SignIn</NavLink>
-            <NavLink exact activeClassName='active' to='/Todo'>SignIn</NavLink>
+            <NavLink exact activeClassName='active' to='/Login'>LognIn</NavLink>
+            <NavLink exact activeClassName='active' to='/Todo'>Todo List</NavLink>
           </header>
           <Switch>
             <Route
