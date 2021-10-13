@@ -27,7 +27,7 @@ export default class TodoRender extends Component {
         <div>
           <form onSubmit = {this.handleSubmit}>
             <label> 
-              <input value={this.state.todo} onChange={(e)=> this.setState({ todoChore: e.target.value })} />
+              <input value={this.state.todoChore} onChange={(e)=> this.setState({ todoChore: e.target.value })} type ='text' />
               <button>Add Todo</button>
             </label>
           </form>
