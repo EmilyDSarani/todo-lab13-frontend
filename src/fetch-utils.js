@@ -14,7 +14,7 @@ export async function getTodo(token){
 export async function putTodo(id, completed, token){
   const response = await request
     .put(`https://saranilist.herokuapp.com/api/todo/${id}`)
-    .send({ completed : completed })
+    .send({ completed })
     .set ('Authorization', token);
   return response.body;
 }

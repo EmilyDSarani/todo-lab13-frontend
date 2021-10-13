@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getTodo, postTodo } from '../fetch-utils';
+import { getTodo, postTodo, putTodo } from '../fetch-utils';
 
 export default class TodoRender extends Component {
     state ={
@@ -26,25 +26,31 @@ export default class TodoRender extends Component {
     //putTodo will need to be able to toggle complete or not complete
     //getTodo will need to get the todo's associated to that account. 
 
-   
+   handlePutSubmit = async (id, completed) =>{
+     
+     await putTodo(id, completed, this.props.token);
+   }
 //add a click handler, then use a turnery with classNames to render in whether it is completed or not
-    render() {
-      return (
-        <div>
-          <form onSubmit = {this.handleSubmit}>
-            <label> 
-              <input value={this.state.todoChore} onChange={(e)=> this.setState({ todoChore: e.target.value })} type ='text' />
-              <button>Add Todo</button>
-            </label>
-          </form>
+   render() {
+     return (
+       <div>
+         <form onSubmit = {this.handleSubmit}>
+           <label> 
+             <input value={this.state.todoChore} onChange={(e)=> this.setState({ todoChore: e.target.value })} type ='text' />
+             <button>Add Todo</button>
+           </label>
+         </form>
           
-          {
-            this.state.todos.map(todo => {
-              return <div key= {todo.id} > {todo.chore} </div>;
-            })
-          }
+         {
+           this.state.todos.map(todo => {
+             return <div key= {todo.id} onClick = {() => this.handlePutSubmit(todo.id, !todo.completed)}
+            //  await getTodo(this.props.token)
+            //  this.setState({ todo:chore })
+               className={todo.completed ? 'todo-completed' : 'todo-not-completed'}> {todo.chore} </div>;
+           })
+         }
 
-        </div>
-      );
-    }
+       </div>
+     );
+   }
 }
