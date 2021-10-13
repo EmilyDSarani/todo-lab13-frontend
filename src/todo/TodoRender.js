@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
+import { getTodo } from '../fetch-utils';
 
 export default class TodoRender extends Component {
-  render() {
-    return (
-      <div>
+    state ={
+      todo:[],
+      todoChore: '',
+    }
+    compondentDidMount = async () =>{
+      const todo = await getTodo(this.props.token);
+      this.setState({ todo });
+    }
+    render() {
+      return (
+        <div>
                 
-      </div>
-    );
-  }
+        </div>
+      );
+    }
 }
