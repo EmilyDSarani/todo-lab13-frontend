@@ -21,10 +21,10 @@ export async function putTodo(id, completed, token){
 //this will allow user to post a new todo item to the list
 //pass through todo and token
 //might need an id here?
-export async function postTodo(todo, token){
+export async function postTodo(chore, token){
   const response = await request
     .post(`https://saranilist.herokuapp.com/api/todo`)
-    .send({ todo : todo })
+    .send({ chore })
     .set ('Authorization', token);
   return response.body;
 }
