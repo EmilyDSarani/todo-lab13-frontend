@@ -29,6 +29,8 @@ export default class TodoRender extends Component {
    handlePutSubmit = async (id, completed) =>{
      
      await putTodo(id, completed, this.props.token);
+     const todos = await getTodo(this.props.token);
+     this.setState({ todos });
    }
 //add a click handler, then use a turnery with classNames to render in whether it is completed or not
    render() {
@@ -44,8 +46,6 @@ export default class TodoRender extends Component {
          {
            this.state.todos.map(todo => {
              return <div key= {todo.id} onClick = {() => this.handlePutSubmit(todo.id, !todo.completed)}
-            //   getTodo(this.props.token)
-            //  this.setState({ todo:chore })
                className={todo.completed ? 'todo-completed' : 'todo-not-completed'}> {todo.chore} </div>;
            })
          }
