@@ -44,7 +44,7 @@ export default class TodoRender extends Component {
          {
            this.state.todos.map(todo => {
              return <div key= {todo.id} onClick = {() => this.handlePutSubmit(todo.id, !todo.completed)}
-            //  await getTodo(this.props.token)
+            //   getTodo(this.props.token)
             //  this.setState({ todo:chore })
                className={todo.completed ? 'todo-completed' : 'todo-not-completed'}> {todo.chore} </div>;
            })
